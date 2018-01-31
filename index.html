@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script type="text/javascript">
+            function setup() {
+                setInterval( loadTime, 50 )
+            }
+            function loadTime() {
+                var time = new Date( Date.now() )
+                document.getElementById( "hours" ).innerHTML = time.getHours() + ":" + time.getMinutes()
+                document.getElementById( "seconds" ).innerHTML = time.getSeconds() + "" + Math.floor(time.getMilliseconds()/100) 
+            }
+        </script>
+    </head>
+    <body onload="setup()">
+        <div class="time">
+            <div id="hours" class="hhmm">09:41</div>
+            <div id="seconds" class="seconds">000</div>
+        </div>
+    </body>
+</html>
