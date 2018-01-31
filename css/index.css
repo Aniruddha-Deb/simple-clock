@@ -24,5 +24,5 @@ body {
 
 @font-face {
     font-family: 'seven_segment';
-    src: url( 'http://torinak.com/font/7segment.ttf' ) format('truetype');
+    src: url( '../css/seven_segment.ttf' ) format('truetype');
 }
