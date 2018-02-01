@@ -7,12 +7,16 @@
             }
             function loadTime() {
                 var time = new Date( Date.now() )
-                var hours = String.valueOf( time.getHours() ).padStart( 2, "0" )
-                var minutes = String.valueOf( time.getMinutes() ).padStart( 2, "0" )
+                var hours = pad( time.getHours(), 2 )
+                var minutes = pad( time.getMinutes(), 2 )
                 var seconds = time.getSeconds()*10 + Math.floor(time.getMilliseconds()/100)
-                var secondsString = String.valueOf( seconds ).padStart( 3, "0" )
+                var secondsString = pad( seconds, 3 )
                 document.getElementById( "hours" ).innerHTML = hours + ":" + minutes
                 document.getElementById( "seconds" ).innerHTML = secondsString
+            }
+            function pad( num, size ) {
+                var s = "000" + num;
+                return s.substr( s.length-size );
             }
         </script>
     </head>
